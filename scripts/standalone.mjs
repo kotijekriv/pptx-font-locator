@@ -1,0 +1,10 @@
+import { readFileSync, writeFileSync } from 'node:fs';
+const html=readFileSync('dist/index.html','utf8');
+const script=html.match(/<script type="module"[^>]*src="([^"]+)"[^>]*><\/script>/);
+const style=html.match(/<link rel="stylesheet"[^>]*href="([^"]+)"[^>]*>/);
+if(!script||!style)throw Error('Expected one compiled JavaScript and CSS asset.');
+const code=readFileSync('dist/'+script[1].replace(/^\//,''),'utf8').replaceAll('</script','<\\/script');
+const css=readFileSync('dist/'+style[1].replace(/^\//,''),'utf8');
+const policy=`<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">`;
+writeFileSync('dist/pptx-font-locator-standalone.html',html.replace('</head>',policy+'</head>').replace(script[0],`<script type="module">${code}</script>`).replace(style[0],`<style>${css}</style>`));
+console.log('Created self-contained HTML with embedded original demo and no runtime network dependency.');

@@ -1,0 +1,95 @@
+{
+  "date": "2026-10-20",
+  "reviewerModel": "GPT-6 Astra",
+  "scope": "Finite screen-only readability correction; built-in public/synthetic data. Not a full accessibility certification.",
+  "change": "Appended targeted @media screen color/font-size overrides. Existing larger text is retained; reported helper/header/result labels use12px or more.",
+  "preservation": {
+    "originalStyleBytes": 6883,
+    "originalStyleSha256": "596efe7e120266d614e8f04f94f0d15229827110d442491d95562124fb398936",
+    "originalNonScreenCssByteIdenticalPrefix": true,
+    "onlyAddedMedia": "screen",
+    "protectedCoreDataFixtureFilesUnchanged": 7,
+    "coreDataTestsPrintNotReplayed": true
+  },
+  "criteria": "Ordinary solid-background text4.5:1; large text3:1. Under12px is a practical readability flag, not a claimed universal accessibility minimum.",
+  "observations": [
+    {
+      "browser": "chrome",
+      "version": "155.0.8059.85",
+      "state": "example",
+      "width": 1440,
+      "measuredTextNodes": 162,
+      "essentialTextFindings": 0,
+      "bodyOverflow": false,
+      "excludedRemainingCandidates": [
+        "Decorative brand slash; unchanged."
+      ]
+    },
+    {
+      "browser": "chrome",
+      "version": "155.0.8059.85",
+      "state": "example",
+      "width": 390,
+      "measuredTextNodes": 162,
+      "essentialTextFindings": 0,
+      "bodyOverflow": false,
+      "excludedRemainingCandidates": [
+        "Decorative brand slash; unchanged.",
+        "Original narrow-screen local-status text is hidden; only its dot is rendered. No font-size finding attributed to hidden text."
+      ]
+    },
+    {
+      "browser": "chrome",
+      "version": "155.0.8059.85",
+      "state": "example",
+      "width": 320,
+      "measuredTextNodes": 162,
+      "essentialTextFindings": 0,
+      "bodyOverflow": false,
+      "excludedRemainingCandidates": [
+        "Decorative brand slash; unchanged.",
+        "Original narrow-screen local-status text is hidden; only its dot is rendered. No font-size finding attributed to hidden text."
+      ]
+    },
+    {
+      "browser": "firefox",
+      "version": "153.0",
+      "state": "example",
+      "width": 1440,
+      "measuredTextNodes": 162,
+      "essentialTextFindings": 0,
+      "bodyOverflow": false,
+      "excludedRemainingCandidates": [
+        "Decorative brand slash; unchanged."
+      ]
+    },
+    {
+      "browser": "firefox",
+      "version": "153.0",
+      "state": "example",
+      "width": 390,
+      "measuredTextNodes": 162,
+      "essentialTextFindings": 0,
+      "bodyOverflow": false,
+      "excludedRemainingCandidates": [
+        "Decorative brand slash; unchanged.",
+        "Original narrow-screen local-status text is hidden; only its dot is rendered. No font-size finding attributed to hidden text."
+      ]
+    },
+    {
+      "browser": "firefox",
+      "version": "153.0",
+      "state": "example",
+      "width": 320,
+      "measuredTextNodes": 162,
+      "essentialTextFindings": 0,
+      "bodyOverflow": false,
+      "excludedRemainingCandidates": [
+        "Decorative brand slash; unchanged.",
+        "Original narrow-screen local-status text is hidden; only its dot is rendered. No font-size finding attributed to hidden text."
+      ]
+    }
+  ],
+  "visualInspection": "Chrome and Firefox390px affected result views inspected; Population includes teacher-answer view. Existing internally scrollable wide result tables/pyramid remain supported.",
+  "limits": "Decorative, disabled, graph/SVG, hidden text, gradients/alpha and unmeasured interaction states are outside the claimed pass. No physical-device, user-study or complete accessibility claim. Prior core tests retain their original scope; no logic or data changes."
+}

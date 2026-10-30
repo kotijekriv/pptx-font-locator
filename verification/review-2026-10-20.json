@@ -1,0 +1,105 @@
+{
+  "date": "2026-10-20",
+  "independent_reviewer": "GPT-6 Astra",
+  "review": {
+    "reviewer": "GPT-6 Astra",
+    "scope": "Read-only verification of three previously reproduced P2 PPTX findings, without broad new fuzzing",
+    "result": "PASS for all targeted reproductions",
+    "snapshotSha256": {
+      "src/scanner.ts": "34c745435924167c0fc414888cc1b2074350d4a4c1bd98161dc1026985d6d06c",
+      "src/main.ts": "b9f313c57654ca533bcd9586463c65769fc3856957c96f6f1bfa6bba2eef0a81"
+    },
+    "checks": {
+      "baseline": "363 exact part/font references equal independent XPath oracle; both hidden level3 references retained.",
+      "uppercaseXml": "Saved uppercase slide reproduction now364references/16parts; CasePathOnlyFont found on Slide1.",
+      "contentTypedXml": "Same fixture with .part slide extension also364references/16parts, proving content-type branch rather than only lowercase-extension fallback.",
+      "officialRelationships": "Saved custom URI ending/theme is ignored; slide +mj-lt maps Aptos with same mapping evidence as genuine Office-theme control.",
+      "lifecycle": "Saved staleRAF and delayed-demo race conditions no longer overwrite newest selection or newest unsupported result. Verified Chrome155.0.8059.85 and Firefox153.0; zero pageerrors."
+    },
+    "evidence": [
+      "core-result.json",
+      "content-type-result.json",
+      "lifecycle-result.json"
+    ],
+    "limits": "Targeted local synthetic regression evidence, not arbitrary OOXML correctness, rendering validation or exhaustive browser coverage. Root owns source commits and packaging.",
+    "writes": "Only task work/review-pptx-fixed-astra; no tracked edits."
+  },
+  "prior_development_server_lifecycle_checks": [
+    {
+      "browser": "Chrome",
+      "version": "155.0.8059.85",
+      "raf": {
+        "staleCompletionIgnored": true,
+        "status": "UNSUPPORTED \u00b7 Choose an unencrypted .pptx file.",
+        "resultsHidden": true
+      },
+      "demo": {
+        "staleFetchIgnored": true,
+        "report": "lowercase-control.pptx",
+        "selectedFile": "lowercase-control.pptx"
+      },
+      "errors": []
+    },
+    {
+      "browser": "Firefox",
+      "version": "153.0",
+      "raf": {
+        "staleCompletionIgnored": true,
+        "status": "UNSUPPORTED \u00b7 Choose an unencrypted .pptx file.",
+        "resultsHidden": true
+      },
+      "demo": {
+        "staleFetchIgnored": true,
+        "report": "lowercase-control.pptx",
+        "selectedFile": "lowercase-control.pptx"
+      },
+      "errors": []
+    }
+  ],
+  "source_evidence_sha256": {
+    "review.json": "dd7acb85d63121f41e0460b9a5881ad20b02fa01129ce77c097e0d7250ecb065",
+    "core-result.json": "f8639ec9aec12cb1ee5f3a066a6211decb3ea953b42b8172a676e1bf2d097135",
+    "content-type-result.json": "a0bea276f27db350b758d016144013a088dcb42a6ab0376d4b32c8b6d7c97e5e",
+    "lifecycle-result.json": "bf5143d4b6ac63168c3fa276c4f41b9c4ebf4b5a919ad7bd84b232433a47c1c6"
+  },
+  "final_offline_browser_checks": [
+    {
+      "engine": "chrome",
+      "version": "155.0.8059.85",
+      "offline": true,
+      "checks": [
+        "embedded demo runs offline with 18 references; Ghost Sans export has five",
+        "independent 363-reference part/font multiset matches saved XPath oracle",
+        "both hidden master level-3 exact paths export; keyboard disclosure opens",
+        "390px layout has no body horizontal overflow",
+        "malformed input clears old results",
+        "obsolete animation-frame continuation cannot replace newer unsupported input",
+        "reverse file-read completion preserves newest local selection",
+        "delayed embedded-demo File read cannot replace newer local selection"
+      ],
+      "errors": [],
+      "httpRequests": [],
+      "fixtureSha256": "54c8ff9292bb9edcb4425d2c246cdda4f6cb49c024368297b7af4751a690f57a"
+    },
+    {
+      "engine": "firefox",
+      "version": "153.0",
+      "offline": true,
+      "checks": [
+        "embedded demo runs offline with 18 references; Ghost Sans export has five",
+        "independent 363-reference part/font multiset matches saved XPath oracle",
+        "both hidden master level-3 exact paths export; keyboard disclosure opens",
+        "390px layout has no body horizontal overflow",
+        "malformed input clears old results",
+        "obsolete animation-frame continuation cannot replace newer unsupported input",
+        "reverse file-read completion preserves newest local selection",
+        "delayed embedded-demo File read cannot replace newer local selection"
+      ],
+      "errors": [],
+      "httpRequests": [],
+      "fixtureSha256": "54c8ff9292bb9edcb4425d2c246cdda4f6cb49c024368297b7af4751a690f57a"
+    }
+  ],
+  "fixtures": "Original structural XML demo plus separate original artifact-tool-exported diagnostic presentation; no customer deck or embedded font binaries.",
+  "limits": "Saved-source/reference and synthetic browser evidence; not PowerPoint native interoperability, rendering, missing-font warning, correction success or market validation."
+}

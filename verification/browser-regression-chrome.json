@@ -1,0 +1,18 @@
+{
+  "engine": "chrome",
+  "version": "155.0.8059.85",
+  "offline": true,
+  "checks": [
+    "embedded demo runs offline with 18 references; Ghost Sans export has five",
+    "independent 363-reference part/font multiset matches saved XPath oracle",
+    "both hidden master level-3 exact paths export; keyboard disclosure opens",
+    "390px layout has no body horizontal overflow",
+    "malformed input clears old results",
+    "obsolete animation-frame continuation cannot replace newer unsupported input",
+    "reverse file-read completion preserves newest local selection",
+    "delayed embedded-demo File read cannot replace newer local selection"
+  ],
+  "errors": [],
+  "httpRequests": [],
+  "fixtureSha256": "54c8ff9292bb9edcb4425d2c246cdda4f6cb49c024368297b7af4751a690f57a"
+}

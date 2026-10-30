@@ -1,0 +1,18 @@
+{
+  "kind": "Independent XML XPath fixture oracle for intentionally inserted hidden references",
+  "input_sha256": "54c8ff9292bb9edcb4425d2c246cdda4f6cb49c024368297b7af4751a690f57a",
+  "hidden_references": [
+    {
+      "font": "RootReview Hidden Font",
+      "part": "ppt/slideMasters/slideMaster1.xml",
+      "path": "/p:sldMaster[1]/p:txStyles[1]/p:bodyStyle[1]/a:lvl3pPr[1]/a:defRPr[1]/a:latin[1]/@typeface",
+      "listLevel": 3
+    },
+    {
+      "font": "RootReview Hidden Font",
+      "part": "ppt/slideMasters/slideMaster1.xml",
+      "path": "/p:sldMaster[1]/p:txStyles[1]/p:otherStyle[1]/a:lvl3pPr[1]/a:defRPr[1]/a:latin[1]/@typeface",
+      "listLevel": 3
+    }
+  ]
+}
